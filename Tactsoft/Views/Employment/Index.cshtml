@@ -1,0 +1,258 @@
+﻿@model IEnumerable<Tactsoft.Core.Entities.Employment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">@ViewData["Title"]</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">@ViewData["Title"] List</h3>
+                        <a class="btn btn-outline-primary btn-sm" asp-action="Create">
+                            <i class="fa-regular fa-pen-to-square"></i> Add New
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyBusiness)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Designation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Department)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FromDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ToDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CurrentlyWorking)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Responsibilites)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AreaofExpertise)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyLocation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Skill)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Self)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.job)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Educational)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.professionalTraining)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NTVQF)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SkillDescription)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Language)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ReadingId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.WritingId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SpeakingId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.DesignationRef)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Organization)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.RelativeId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Mobile)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PhoneOffice)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PhoneRes)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Address)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Photos)
+                                </th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyBusiness)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Designation)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Department)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FromDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ToDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CurrentlyWorking)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Responsibilites)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AreaofExpertise)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyLocation)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Skill)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Self)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.job)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Educational)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.professionalTraining)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NTVQF)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SkillDescription)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Language)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ReadingId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.WritingId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SpeakingId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DesignationRef)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Organization)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RelativeId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mobile)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PhoneOffice)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PhoneRes)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Address)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Photos)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
+
+@section Scripts{
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": true, "autoWidth": true,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+}
