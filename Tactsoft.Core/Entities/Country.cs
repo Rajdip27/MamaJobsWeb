@@ -18,5 +18,6 @@ namespace Tactsoft.Core.Entities
 
 
         public IList<District> Districts { get; set; }
+        public IList<Company>  Companies { get; set; }
     }
 }

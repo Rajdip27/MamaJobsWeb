@@ -22,6 +22,7 @@ namespace Tactsoft.Service.Dependency
             services.AddScoped<ISpeakingService, SpeakingService>();
             services.AddScoped<IIndustryTypeService, IndustryTypeService>();
             services.AddScoped<ICompanySizeService, CompanySizeService>();
+            services.AddScoped<ICompanyService, CompanyService>();
         }
     }
 }

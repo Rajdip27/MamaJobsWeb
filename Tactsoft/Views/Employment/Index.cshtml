@@ -228,7 +228,7 @@
                                         @Html.DisplayFor(modelItem => item.Address)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Photos)
+                                        <img class="img-thumbnail" width="50" src="~/images/Employment/@Html.DisplayFor(modelItem => item.Photos)" alt="Image" />
                                     </td>
                                     <td style="width:90px;text-align:center">
                                         @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fa-regular fa-pen-to-square", @style = "color:green" }) |

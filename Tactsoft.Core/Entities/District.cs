@@ -22,6 +22,6 @@ namespace Tactsoft.Core.Entities
 
         public IList<Thana> Thanas { get; set; }
 
-        ///public IList<Company> Companys { get; set; }
+        public IList<Company> Companies { get; set; }
     }
 }

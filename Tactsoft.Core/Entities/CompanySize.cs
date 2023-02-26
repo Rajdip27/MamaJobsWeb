@@ -13,5 +13,6 @@ namespace Tactsoft.Core.Entities
     {
         [Display(Name = "Company Size")]
         public String CompanyTotalSize { get; set; }
+        public IList<Company> Companies { get; set; }
     }
 }

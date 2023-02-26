@@ -155,6 +155,98 @@ namespace Tactsoft.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.Company", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("BusinessDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BusinessTradeLicienceNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyAddressBangla")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyAddressEnglish")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyNameBanglaName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyNameEnglishName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("CompanySizeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ContactPersonDesignation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactPersonEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactPersonMobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactPersonName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<long>("DistrictId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("IndustialTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("No")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RLNO")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ThanaId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("WebsiteUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Yes")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanySizeId");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("DistrictId");
+
+                    b.HasIndex("IndustialTypeId");
+
+                    b.HasIndex("ThanaId");
+
+                    b.ToTable("Companies");
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.CompanySize", b =>
                 {
                     b.Property<long>("Id")
@@ -762,6 +854,49 @@ namespace Tactsoft.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.Company", b =>
+                {
+                    b.HasOne("Tactsoft.Core.Entities.CompanySize", "CompanySize")
+                        .WithMany("Companies")
+                        .HasForeignKey("CompanySizeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.Country", "Country")
+                        .WithMany("Companies")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.District", "District")
+                        .WithMany("Companies")
+                        .HasForeignKey("DistrictId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.IndustryType", "IndustialType")
+                        .WithMany("Companies")
+                        .HasForeignKey("IndustialTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.Thana", "Thana")
+                        .WithMany("Companies")
+                        .HasForeignKey("ThanaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CompanySize");
+
+                    b.Navigation("Country");
+
+                    b.Navigation("District");
+
+                    b.Navigation("IndustialType");
+
+                    b.Navigation("Thana");
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.District", b =>
                 {
                     b.HasOne("Tactsoft.Core.Entities.Country", "Countrys")
@@ -819,14 +954,28 @@ namespace Tactsoft.Data.Migrations
                     b.Navigation("District");
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.CompanySize", b =>
+                {
+                    b.Navigation("Companies");
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.Country", b =>
                 {
+                    b.Navigation("Companies");
+
                     b.Navigation("Districts");
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.District", b =>
                 {
+                    b.Navigation("Companies");
+
                     b.Navigation("Thanas");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.IndustryType", b =>
+                {
+                    b.Navigation("Companies");
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.Reading", b =>
@@ -842,6 +991,11 @@ namespace Tactsoft.Data.Migrations
             modelBuilder.Entity("Tactsoft.Core.Entities.Speaking", b =>
                 {
                     b.Navigation("Employments");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.Thana", b =>
+                {
+                    b.Navigation("Companies");
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.Writing", b =>

@@ -30,6 +30,7 @@ namespace Tactsoft.Service.DbDependencies
         public DbSet<Employment> Employments { get; set; }
         public DbSet<IndustryType>  IndustryTypes { get; set; }
         public DbSet<CompanySize>  CompanySizes { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
 
 
