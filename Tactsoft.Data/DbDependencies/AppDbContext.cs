@@ -28,6 +28,8 @@ namespace Tactsoft.Service.DbDependencies
         public DbSet<Writing> Writings { get; set; }
         public DbSet<Speaking> Speakings { get; set; }
         public DbSet<Employment> Employments { get; set; }
+        public DbSet<IndustryType>  IndustryTypes { get; set; }
+        public DbSet<CompanySize>  CompanySizes { get; set; }
 
 
 

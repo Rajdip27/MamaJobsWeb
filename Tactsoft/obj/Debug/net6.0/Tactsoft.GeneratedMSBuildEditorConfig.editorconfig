@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\RajdipProjectMamaJobsLast\Tactsoft\Tactsoft\Tactsoft
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/CompanySize/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNpemVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/CompanySize/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNpemVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/CompanySize/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNpemVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/CompanySize/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNpemVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/CompanySize/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVNpemVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/Country/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRyeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -85,6 +105,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/IndustryType/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlUeXBlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/IndustryType/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlUeXBlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/IndustryType/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlUeXBlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/IndustryType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlUeXBlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/IndustryType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlUeXBlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/RajdipProjectMamaJobsLast/Tactsoft/Tactsoft/Tactsoft/Views/Reading/Create.cshtml]

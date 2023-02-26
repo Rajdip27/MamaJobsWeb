@@ -155,6 +155,43 @@ namespace Tactsoft.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.CompanySize", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("CompanyTotalSize")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CompanySizes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CompanyTotalSize = "10 too 100",
+                            CreatedBy = 1L,
+                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0))
+                        });
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.Country", b =>
                 {
                     b.Property<long>("Id")
@@ -363,7 +400,7 @@ namespace Tactsoft.Data.Migrations
                     b.ToTable("Employments");
                 });
 
-            modelBuilder.Entity("Tactsoft.Core.Entities.Language", b =>
+            modelBuilder.Entity("Tactsoft.Core.Entities.IndustryType", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -377,8 +414,7 @@ namespace Tactsoft.Data.Migrations
                     b.Property<DateTimeOffset>("CreatedDateUtc")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("LanguageName")
-                        .IsRequired()
+                    b.Property<string>("IndustryTypeName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("UpdatedBy")
@@ -389,7 +425,7 @@ namespace Tactsoft.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Languages");
+                    b.ToTable("IndustryTypes");
 
                     b.HasData(
                         new
@@ -397,7 +433,7 @@ namespace Tactsoft.Data.Migrations
                             Id = 1L,
                             CreatedBy = 1L,
                             CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0)),
-                            LanguageName = "English"
+                            IndustryTypeName = "Devlopment"
                         });
                 });
 

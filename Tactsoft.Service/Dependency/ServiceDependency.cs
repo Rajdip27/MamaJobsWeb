@@ -20,6 +20,8 @@ namespace Tactsoft.Service.Dependency
             services.AddScoped<IReadingService, ReadingService>();
             services.AddScoped<IWritingService, WritingService>();
             services.AddScoped<ISpeakingService, SpeakingService>();
+            services.AddScoped<IIndustryTypeService, IndustryTypeService>();
+            services.AddScoped<ICompanySizeService, CompanySizeService>();
         }
     }
 }

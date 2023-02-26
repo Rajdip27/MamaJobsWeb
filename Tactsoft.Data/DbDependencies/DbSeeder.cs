@@ -59,6 +59,21 @@ namespace Tactsoft.Data.DbDependencies
                 CreatedBy = 1,
                 CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
             });
+            modelBuilder.Entity<IndustryType>().HasData(new IndustryType
+            {
+                Id = 1,
+                IndustryTypeName = "Devlopment",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
+
+            modelBuilder.Entity<CompanySize>().HasData(new CompanySize
+            {
+                Id = 1,
+                CompanyTotalSize = "10 too 100",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
         }
 
     }
