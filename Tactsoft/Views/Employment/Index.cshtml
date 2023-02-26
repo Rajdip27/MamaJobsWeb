@@ -192,13 +192,13 @@
                                         @Html.DisplayFor(modelItem => item.Language)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.ReadingId)
+                                        @Html.DisplayFor(modelItem => item.Readings.ReadingName)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.WritingId)
+                                        @Html.DisplayFor(modelItem => item.Writings.WritingName)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.SpeakingId)
+                                        @Html.DisplayFor(modelItem => item.Speakings.SpeakingName)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Name)
@@ -213,7 +213,7 @@
                                         @Html.DisplayFor(modelItem => item.Email)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.RelativeId)
+                                        @Html.DisplayFor(modelItem => item.Readings.ReadingName)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Mobile)
@@ -230,10 +230,10 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Photos)
                                     </td>
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                    <td style="width:90px;text-align:center">
+                                        @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fa-regular fa-pen-to-square", @style = "color:green" }) |
+                                        @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fa-regular fa-eye", @style = "color:blue" }) |
+                                        @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fa-regular fa-trash-can", @style = "color:red" })
                                     </td>
                                 </tr>
                             }

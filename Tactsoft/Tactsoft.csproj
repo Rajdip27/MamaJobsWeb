@@ -82,4 +82,8 @@
 	  <ProjectReference Include="..\Tactsoft.Service\Tactsoft.Service.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\Employment\" />
+	</ItemGroup>
+
 </Project>

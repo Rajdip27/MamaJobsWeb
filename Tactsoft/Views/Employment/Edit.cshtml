@@ -1,0 +1,316 @@
+﻿@model Tactsoft.Core.Entities.Employment
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Employment Registraion Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Employment info</h3>
+                </div>
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="row mt-2">
+
+                            <div class="col-md-6">
+                                <div class="row mb-2">
+                                    <label asp-for="CompanyName" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="CompanyName" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="CompanyBusiness" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="CompanyBusiness" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="CompanyBusiness" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="Designation" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Designation" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Designation" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="Department" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Department" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Department" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="FromDate" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="FromDate" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="FromDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="ToDate" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="ToDate" class="form-control" />
+                                        <span asp-validation-for="ToDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+
+                                    <div class="col-md-9 pt-2">
+                                        <label class="col-md-4 col-form-label">Currently Working</label>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="CurrentlyWorking" />
+                                            <label class="form-check-label" asp-for="CurrentlyWorking">
+                                                @Html.DisplayNameFor(model => model.CurrentlyWorking)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label asp-for="Responsibilites" class="col-md-3 col-form-label"></label>
+                                        <div class="col-md-9">
+                                            <input asp-for="Responsibilites" class="form-control" placeholder="Company English Name" />
+                                            <span asp-validation-for="Responsibilites" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label asp-for="AreaofExpertise" class="col-md-3 col-form-label"></label>
+                                        <div class="col-md-9">
+                                            <input asp-for="AreaofExpertise" class="form-control" placeholder="Company English Name" />
+                                            <span asp-validation-for="AreaofExpertise" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label asp-for="CompanyLocation" class="col-md-3 col-form-label"></label>
+                                        <div class="col-md-9">
+                                            <input asp-for="CompanyLocation" class="form-control" placeholder="Company English Name" />
+                                            <span asp-validation-for="CompanyLocation" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label asp-for="Skill" class="col-md-3 col-form-label"></label>
+                                        <div class="col-md-9">
+                                            <input asp-for="Skill" class="form-control" placeholder="Company English Name" />
+                                            <span asp-validation-for="Skill" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-2">
+                                        <label class="col-md-3 col-form-label">How to did you Learn The skill?</label>
+                                        <div class="col-md-9 pt-2">
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" asp-for="Self" />
+                                                <label class="form-check-label" asp-for="Self">@Html.DisplayNameFor(model => model.Self)</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" asp-for="job" />
+                                                <label class="form-check-label" asp-for="job">
+                                                    @Html.DisplayNameFor(model => model.job)
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" asp-for="Educational" />
+                                                <label class="form-check-label" asp-for="Educational">
+                                                    @Html.DisplayNameFor(model => model.Educational)
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" asp-for="professionalTraining" />
+                                                <label class="form-check-label" asp-for="professionalTraining">
+                                                    @Html.DisplayNameFor(model => model.professionalTraining)
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" asp-for="NTVQF" />
+                                                <label class="form-check-label" asp-for="NTVQF">
+                                                    @Html.DisplayNameFor(model => model.NTVQF)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="row mb-3">
+                                            <label asp-for="Photos" class="col-md-3 col-form-label"></label>
+                                            <div class="col-md-9">
+                                                <input type="file" asp-for="Photos" class="form-control" name="pictureFile" accept="image/*" id="FileUpload" onchange="PreviewImage()" />
+                                                <span asp-validation-for="Photos" class="text-danger"></span>
+                                            </div>
+                                            <div class="mt-3" style="text-align:end">
+                                                <img src="~/images/Employment/@Model.Photos" alt="img" id="UploadFile" class="img-thumbnail" style="width:170px;" />
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-md-6">
+                                <div class="row mb-2">
+                                    <label asp-for="SkillDescription" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <textarea asp-for="SkillDescription" class="form-control"></textarea>
+                                        <span asp-validation-for="SkillDescription" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="Language" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Language" class="form-control" placeholder="1 to 1000" />
+                                        <span asp-validation-for="Language" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="ReadingId" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <select asp-for="ReadingId" class="form-control" asp-items="ViewBag.ReadingId">
+                                            <option value="">Select Reading</option>
+                                        </select>
+                                        <span asp-validation-for="ReadingId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="WritingId" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <select asp-for="WritingId" class="form-control" asp-items="ViewBag.WritingId">
+                                            <option value="">Select Writing</option>
+                                        </select>
+                                        <span asp-validation-for="WritingId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="SpeakingId" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <select asp-for="SpeakingId" class="form-control" asp-items="ViewBag.SpeakingId">
+                                            <option value="">Select Speaking</option>
+                                        </select>
+                                        <span asp-validation-for="SpeakingId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="Name" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Name" class="form-control" placeholder="Business Trade Licience No" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="DesignationRef" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="DesignationRef" class="form-control" placeholder="Emaxple www.domain.com" />
+                                        <span asp-validation-for="DesignationRef" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="Organization" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Organization" class="form-control" placeholder="RLNO 00059" />
+                                        <span asp-validation-for="Organization" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="Email" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <input asp-for="Email" class="form-control" placeholder="Company Address English" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="RelativeId" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <select asp-for="RelativeId" class="form-control" asp-items="ViewBag.RelativeId">
+                                            <option value="">Select Relative</option>
+                                        </select>
+                                        <span asp-validation-for="RelativeId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="Mobile" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <input asp-for="Mobile" class="form-control" placeholder="Company Address English" />
+                                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="PhoneOffice" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <input asp-for="PhoneOffice" class="form-control" placeholder="Company Address English" />
+                                        <span asp-validation-for="PhoneOffice" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="PhoneRes" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <input asp-for="PhoneRes" class="form-control"  />
+                                        <span asp-validation-for="PhoneRes" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="Address" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <textarea asp-for="Address" class="form-control" placeholder="Company Address English"></textarea>
+                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Update
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tactsoft.Core.Base;
+using Tactsoft.Core.DataType;
 
 namespace Tactsoft.Core.Entities
 {
@@ -19,9 +20,12 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Department")]
         public string Department { get; set; }
 
-        [Display(Name ="Employment Period")]
+        [Display(Name ="Employment Period(From Date)")]
+        
+        
         public DateTime FromDate { get; set; }
-        [Display(Name = "Employment Period")]
+        [Display(Name = "Employment Period (To Date)")]
+       
         public DateTime ToDate { get; set; }
         [Display(Name = "Currently Working")]
         public Boolean CurrentlyWorking { get; set; }
