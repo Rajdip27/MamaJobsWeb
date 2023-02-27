@@ -31,9 +31,11 @@ namespace Tactsoft.Service.DbDependencies
         public DbSet<IndustryType>  IndustryTypes { get; set; }
         public DbSet<CompanySize>  CompanySizes { get; set; }
         public DbSet<Company> Companies { get; set; }
-
-
-
+        public DbSet<JobCategory>  JobCategories { get; set; }
+        public DbSet<ResumeReceivingOption>  ResumeReceivings { get; set; }
+        public DbSet<ServiceType>  ServiceTypes { get; set; }
+        public DbSet<OtherBenfits>  OtherBenfits { get; set; }
+        public DbSet<PostingJobs>  PostingJobs { get; set; }
 
         #endregion
 

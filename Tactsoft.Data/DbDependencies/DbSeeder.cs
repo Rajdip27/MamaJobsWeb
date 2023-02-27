@@ -74,6 +74,35 @@ namespace Tactsoft.Data.DbDependencies
                 CreatedBy = 1,
                 CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
             });
+
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory
+            {
+                Id = 1,
+                JobCategoryeName = "IT",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
+            modelBuilder.Entity<ResumeReceivingOption>().HasData(new ResumeReceivingOption
+            {
+                Id = 1,
+                ResumeOption = "Apply Online",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
+            modelBuilder.Entity<ServiceType>().HasData(new ServiceType
+            {
+                Id = 1,
+                ServiceTypeName = "Stand-out Listing",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
+            modelBuilder.Entity<OtherBenfits>().HasData(new OtherBenfits
+            {
+                Id = 1,
+                BenfitName = "Mobile bil",
+                CreatedBy = 1,
+                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
+            });
         }
 
     }

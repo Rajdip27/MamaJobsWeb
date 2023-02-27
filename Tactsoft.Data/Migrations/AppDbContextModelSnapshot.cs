@@ -529,6 +529,302 @@ namespace Tactsoft.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.JobCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("JobCategoryeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("JobCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreatedBy = 1L,
+                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0)),
+                            JobCategoryeName = "IT"
+                        });
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.OtherBenfits", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("BenfitName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OtherBenfits");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            BenfitName = "Mobile bil",
+                            CreatedBy = 1L,
+                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0))
+                        });
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.PostingJobs", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<string>("AdditionalRequirements")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AdditionalSalaryinfo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ApplicantList")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ApplicationDeadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Applying")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AreaOfBusiness")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AreaOfExperience")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyBusiness")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyLogo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Contractual")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Degree")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailAddress")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Entry")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Experience")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FestivelBonus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Freelance")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FreshersApply")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FullTime")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HardCoppy")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("IndustryTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Infoemail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("InsideBangladesh")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Internship")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("JobCategoryeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("JobContext")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobDetail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobLocation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobResponsibillites")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobTittle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KeySellingPoints")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LanchFacilitics")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MamajobEmail")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Maxage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MaximumSalary")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MaximumYearofExperience")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Mid")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MinimumSalary")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MinimumYearofExperience")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("NA")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("OtherEducationQualification")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Others")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("OthersBenefitsId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("OutsideBangladesh")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("PartTime")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PreferredEducationInstitution")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PreferredRetiredArmy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfessionalCertification")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ResumeReceivingOptionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("SalaryReview")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("ServiceTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Skills")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SpecialInstructionforjobSeekers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Top")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TradeCourse")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<bool>("WalkinInterview")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("WorkatOffice")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Workathome")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("personwithdisability")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IndustryTypeId");
+
+                    b.HasIndex("JobCategoryeId");
+
+                    b.HasIndex("OthersBenefitsId");
+
+                    b.HasIndex("ResumeReceivingOptionId");
+
+                    b.HasIndex("ServiceTypeId");
+
+                    b.ToTable("PostingJobs");
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.Reading", b =>
                 {
                     b.Property<long>("Id")
@@ -600,6 +896,81 @@ namespace Tactsoft.Data.Migrations
                             CreatedBy = 1L,
                             CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0)),
                             RelativeName = "Techer"
+                        });
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.ResumeReceivingOption", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("ResumeOption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResumeReceivings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreatedBy = 1L,
+                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0)),
+                            ResumeOption = "Apply Online"
+                        });
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.ServiceType", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<long>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset>("CreatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("ServiceTypeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("UpdatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ServiceTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreatedBy = 1L,
+                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0)),
+                            ServiceTypeName = "Stand-out Listing"
                         });
                 });
 
@@ -943,6 +1314,49 @@ namespace Tactsoft.Data.Migrations
                     b.Navigation("Writings");
                 });
 
+            modelBuilder.Entity("Tactsoft.Core.Entities.PostingJobs", b =>
+                {
+                    b.HasOne("Tactsoft.Core.Entities.IndustryType", "IndustryType")
+                        .WithMany("PostingJobs")
+                        .HasForeignKey("IndustryTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.JobCategory", "JobCategory")
+                        .WithMany("PostingJobs")
+                        .HasForeignKey("JobCategoryeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.OtherBenfits", "OtherBenfit")
+                        .WithMany("PostingJobs")
+                        .HasForeignKey("OthersBenefitsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.ResumeReceivingOption", "ResumeReceivingOption")
+                        .WithMany("PostingJobs")
+                        .HasForeignKey("ResumeReceivingOptionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Tactsoft.Core.Entities.ServiceType", "ServiceType")
+                        .WithMany("PostingJobs")
+                        .HasForeignKey("ServiceTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("IndustryType");
+
+                    b.Navigation("JobCategory");
+
+                    b.Navigation("OtherBenfit");
+
+                    b.Navigation("ResumeReceivingOption");
+
+                    b.Navigation("ServiceType");
+                });
+
             modelBuilder.Entity("Tactsoft.Core.Entities.Thana", b =>
                 {
                     b.HasOne("Tactsoft.Core.Entities.District", "District")
@@ -976,6 +1390,18 @@ namespace Tactsoft.Data.Migrations
             modelBuilder.Entity("Tactsoft.Core.Entities.IndustryType", b =>
                 {
                     b.Navigation("Companies");
+
+                    b.Navigation("PostingJobs");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.JobCategory", b =>
+                {
+                    b.Navigation("PostingJobs");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.OtherBenfits", b =>
+                {
+                    b.Navigation("PostingJobs");
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.Reading", b =>
@@ -986,6 +1412,16 @@ namespace Tactsoft.Data.Migrations
             modelBuilder.Entity("Tactsoft.Core.Entities.Relative", b =>
                 {
                     b.Navigation("Employments");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.ResumeReceivingOption", b =>
+                {
+                    b.Navigation("PostingJobs");
+                });
+
+            modelBuilder.Entity("Tactsoft.Core.Entities.ServiceType", b =>
+                {
+                    b.Navigation("PostingJobs");
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.Speaking", b =>

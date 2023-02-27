@@ -1,0 +1,452 @@
+﻿@model IEnumerable<Tactsoft.Core.Entities.PostingJobs>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">@ViewData["Title"]</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">@ViewData["Title"] List</h3>
+                        <a class="btn btn-outline-primary btn-sm" asp-action="Create">
+                            <i class="fa-regular fa-pen-to-square"></i> Add New
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ServiceTypeId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobTittle)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NA)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobCategoryeId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FullTime)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PartTime)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Contractual)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Internship)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Freelance)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ApplicationDeadline)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ResumeReceivingOptionId)
+                                </th>
+                                
+                                <th>
+                                    @Html.DisplayNameFor(model => model.EmailAddress)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.HardCoppy)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.WalkinInterview)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Infoemail)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MamajobEmail)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SpecialInstructionforjobSeekers)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyLogo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Entry)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Mid)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Top)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.KeySellingPoints)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobContext)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobResponsibillites)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.WorkatOffice)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Workathome)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.InsideBangladesh)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.OutsideBangladesh)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobLocation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MinimumSalary)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MaximumSalary)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobDetail)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ApplicantList)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Applying)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.OthersBenefitsId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LanchFacilitics)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SalaryReview)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FestivelBonus)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Others)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AdditionalSalaryinfo)
+                                </th>
+                                
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Degree)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PreferredEducationInstitution)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.OtherEducationQualification)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.TradeCourse)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ProfessionalCertification)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Experience)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MinimumYearofExperience)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MaximumYearofExperience)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FreshersApply)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AreaOfExperience)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AreaOfBusiness)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Skills)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AdditionalRequirements)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Gender)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Mainage)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Maxage)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.personwithdisability)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PreferredRetiredArmy)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyAddress)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IndustryTypeId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyBusiness)
+                                </th>
+
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ServiceTypeId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobTittle)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NA)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobCategoryeId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FullTime)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PartTime)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Contractual)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Internship)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Freelance)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ApplicationDeadline)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ResumeReceivingOptionId)
+                                    </td>
+                                  
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.EmailAddress)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.HardCoppy)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.WalkinInterview)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Infoemail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MamajobEmail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SpecialInstructionforjobSeekers)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyLogo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Entry)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mid)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Top)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.KeySellingPoints)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobContext)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobResponsibillites)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.WorkatOffice)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Workathome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.InsideBangladesh)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OutsideBangladesh)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobLocation)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MinimumSalary)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaximumSalary)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.JobDetail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ApplicantList)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Applying)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OthersBenefitsId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LanchFacilitics)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SalaryReview)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FestivelBonus)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Others)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AdditionalSalaryinfo)
+                                    </td>
+                                   
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Degree)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PreferredEducationInstitution)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OtherEducationQualification)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TradeCourse)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProfessionalCertification)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Experience)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MinimumYearofExperience)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaximumYearofExperience)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FreshersApply)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AreaOfExperience)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AreaOfBusiness)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Skills)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AdditionalRequirements)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Gender)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mainage)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Maxage)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.personwithdisability)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PreferredRetiredArmy)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyAddress)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IndustryTypeId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyBusiness)
+                                    </td>
+                                    <td style="width:60px;text-align:center">
+                                        @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fa-regular fa-pen-to-square", @style = "color:green" }) |
+                                        @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fa-regular fa-eye", @style = "color:blue" }) |
+                                        @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fa-regular fa-trash-can", @style = "color:red" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
+
+@section Scripts{
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": true, "autoWidth": true,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+}
+
+
+

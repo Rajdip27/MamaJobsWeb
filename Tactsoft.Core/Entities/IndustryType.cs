@@ -15,5 +15,6 @@ namespace Tactsoft.Core.Entities
 
         public string IndustryTypeName { get; set; }
         public IList<Company> Companies { get; set; }
+        public IList<PostingJobs> PostingJobs { get; set; }
     }
 }

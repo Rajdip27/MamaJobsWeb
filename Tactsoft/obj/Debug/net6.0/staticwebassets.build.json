@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OwDln/cKvomw05uN5+ZpuLjnmiPnlt4JNPGdDFVSNaM=",
+  "Hash": "FvOCtOf60376BMx3yfeMpxzOspAHAYNjB8e3JWOBTNQ=",
   "Source": "Tactsoft",
   "BasePath": "_content/Tactsoft",
   "Mode": "Default",
@@ -2327,6 +2327,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Employment\\cc5cb8edc33e.jpg"
+    },
+    {
+      "Identity": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\wwwroot\\images\\PostingJobs\\m7.jpg",
+      "SourceId": "Tactsoft",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\wwwroot\\",
+      "BasePath": "_content/Tactsoft",
+      "RelativePath": "images/PostingJobs/m7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\PostingJobs\\m7.jpg"
     },
     {
       "Identity": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\wwwroot\\js\\site.js",
