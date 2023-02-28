@@ -16,7 +16,6 @@ namespace Tactsoft.Data.EntityConfigurations
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.JobCategory).WithMany(x => x.PostingJobs).HasForeignKey(x => x.JobCategoryeId);
             builder.HasOne(x => x.ServiceType).WithMany(x => x.PostingJobs).HasForeignKey(x => x.ServiceTypeId);
-            builder.HasOne(x => x.OtherBenfit).WithMany(x => x.PostingJobs).HasForeignKey(x => x.OthersBenefitsId);
             builder.HasOne(x => x.IndustryType).WithMany(x => x.PostingJobs).HasForeignKey(x => x.IndustryTypeId);
             builder.HasOne(x => x.ResumeReceivingOption).WithMany(x => x.PostingJobs).HasForeignKey(x => x.ResumeReceivingOptionId);
         }

@@ -566,44 +566,6 @@ namespace Tactsoft.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Tactsoft.Core.Entities.OtherBenfits", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
-
-                    b.Property<string>("BenfitName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("CreatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTimeOffset>("CreatedDateUtc")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTimeOffset?>("UpdatedDateUtc")
-                        .HasColumnType("datetimeoffset");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("OtherBenfits");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            BenfitName = "Mobile bil",
-                            CreatedBy = 1L,
-                            CreatedDateUtc = new DateTimeOffset(new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 6, 0, 0, 0))
-                        });
-                });
-
             modelBuilder.Entity("Tactsoft.Core.Entities.PostingJobs", b =>
                 {
                     b.Property<long>("Id")
@@ -654,6 +616,9 @@ namespace Tactsoft.Data.Migrations
                     b.Property<DateTimeOffset>("CreatedDateUtc")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<bool>("CreditCard")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Degree")
                         .HasColumnType("nvarchar(max)");
 
@@ -691,6 +656,9 @@ namespace Tactsoft.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("InsideBangladesh")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("InsuranceGratulty")
                         .HasColumnType("bit");
 
                     b.Property<bool>("Internship")
@@ -735,6 +703,9 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("MaximumYearofExperience")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("MedicalAllowance")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("Mid")
                         .HasColumnType("bit");
 
@@ -744,7 +715,13 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("MinimumYearofExperience")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("MoblieBil")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("NA")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Nah")
                         .HasColumnType("bit");
 
                     b.Property<string>("OtherEducationQualification")
@@ -753,13 +730,19 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("Others")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("OthersBenefitsId")
-                        .HasColumnType("bigint");
-
                     b.Property<bool>("OutsideBangladesh")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("OverTimeAllowoanec")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("PartTime")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("PensionPlicy")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("PerformanceBouns")
                         .HasColumnType("bit");
 
                     b.Property<string>("PreferredEducationInstitution")
@@ -770,6 +753,12 @@ namespace Tactsoft.Data.Migrations
 
                     b.Property<string>("ProfessionalCertification")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ProfitShare")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Providantfund")
+                        .HasColumnType("bit");
 
                     b.Property<long>("ResumeReceivingOptionId")
                         .HasColumnType("bigint");
@@ -786,7 +775,13 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("SpecialInstructionforjobSeekers")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("TA")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("Top")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("TourAllowance")
                         .HasColumnType("bit");
 
                     b.Property<string>("TradeCourse")
@@ -799,6 +794,9 @@ namespace Tactsoft.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<bool>("WalkinInterview")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Wekekly2Holidays")
                         .HasColumnType("bit");
 
                     b.Property<bool>("WorkatOffice")
@@ -815,8 +813,6 @@ namespace Tactsoft.Data.Migrations
                     b.HasIndex("IndustryTypeId");
 
                     b.HasIndex("JobCategoryeId");
-
-                    b.HasIndex("OthersBenefitsId");
 
                     b.HasIndex("ResumeReceivingOptionId");
 
@@ -1328,12 +1324,6 @@ namespace Tactsoft.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Tactsoft.Core.Entities.OtherBenfits", "OtherBenfit")
-                        .WithMany("PostingJobs")
-                        .HasForeignKey("OthersBenefitsId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Tactsoft.Core.Entities.ResumeReceivingOption", "ResumeReceivingOption")
                         .WithMany("PostingJobs")
                         .HasForeignKey("ResumeReceivingOptionId")
@@ -1349,8 +1339,6 @@ namespace Tactsoft.Data.Migrations
                     b.Navigation("IndustryType");
 
                     b.Navigation("JobCategory");
-
-                    b.Navigation("OtherBenfit");
 
                     b.Navigation("ResumeReceivingOption");
 
@@ -1395,11 +1383,6 @@ namespace Tactsoft.Data.Migrations
                 });
 
             modelBuilder.Entity("Tactsoft.Core.Entities.JobCategory", b =>
-                {
-                    b.Navigation("PostingJobs");
-                });
-
-            modelBuilder.Entity("Tactsoft.Core.Entities.OtherBenfits", b =>
                 {
                     b.Navigation("PostingJobs");
                 });

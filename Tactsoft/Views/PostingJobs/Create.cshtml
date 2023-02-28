@@ -324,15 +324,99 @@
                                     </div>
                                 </div>
 
+                                
+
                                 <div class="row mb-2">
-                                    <label asp-for="OthersBenefitsId" class="col-md-6 col-form-label"></label>
-                                    <div class="col-md-6">
-                                        <select asp-for="OthersBenefitsId" class="form-control" asp-items="ViewBag.OthersBenefitsId">
-                                            <option value="">Select Job Categorye</option>
-                                        </select>
-                                        <span asp-validation-for="OthersBenefitsId" class="text-danger"></span>
+                                    <label class="col-md-3 col-form-label">Compensation & Other Benfits</label>
+                                    <div class="col-md-9 pt-2">
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="Nah" />
+                                            <label class="form-check-label" >NA</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="TA" />
+                                            <label class="form-check-label" >
+                                                T/A
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="MoblieBil" />
+                                            <label class="form-check-label" >
+                                                Moblie Bil
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="PensionPlicy" />
+                                            <label class="form-check-label" >
+                                               Pension Plicy
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="TourAllowance" />
+                                            <label class="form-check-label" >
+                                                Tour Allowance
+                                            </label>
+                                        </div>
+
+                                          <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="CreditCard" />
+                                            <label class="form-check-label" >
+                                               Credit Card
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="MedicalAllowance" />
+                                            <label class="form-check-label" >
+                                              Medical Allowance
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="PerformanceBouns" />
+                                            <label class="form-check-label" >
+                                                Performance Bouns
+                                            </label>
+                                        </div>
+                                         <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="ProfitShare" />
+                                            <label class="form-check-label" >
+                                               Profit Share
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="Providantfund" />
+                                            <label class="form-check-label">
+                                                Providant fund
+                                            </label>
+                                        </div>
+                                         <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="Wekekly2Holidays" />
+                                            <label class="form-check-label">
+                                               Wekekly 2 Holidays
+                                            </label>
+                                        </div>
+
+                                         <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="InsuranceGratulty" />
+                                            <label class="form-check-label">
+                                              Insurance Gratulty
+                                            </label>
+                                        </div>
+                                          <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="OverTimeAllowoanec" />
+                                            <label class="form-check-label">
+                                                Over Time Allowoanec
+                                            </label>
+                                        </div>
+
                                     </div>
                                 </div>
+
+
+
+
 
                                 <div class="row mb-2">
                                     <label asp-for="LanchFacilitics" class="col-md-3 col-form-label"></label>

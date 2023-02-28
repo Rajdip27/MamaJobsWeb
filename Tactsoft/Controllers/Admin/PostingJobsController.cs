@@ -9,23 +9,23 @@ namespace Tactsoft.Controllers.Admin
         private readonly IPostingJobsService _jobsService;
         private readonly IJobCategoryService _jobCategoryService;
         private readonly IIndustryTypeService _industryTypeService;
-        private readonly IOtherBenfitsService _otherbenfitsService;
+       
         private readonly IServiceTypeService _serviceTypeService;
         private readonly IResumeReceivingOptionService _resumeReceivingOptionService;
 
-        public PostingJobsController(IPostingJobsService jobsService, IJobCategoryService jobCategoryService, IIndustryTypeService industryTypeService, IOtherBenfitsService otherbenfitsService, IServiceTypeService serviceTypeService, IResumeReceivingOptionService resumeReceivingOptionService)
+        public PostingJobsController(IPostingJobsService jobsService, IJobCategoryService jobCategoryService, IIndustryTypeService industryTypeService,  IServiceTypeService serviceTypeService, IResumeReceivingOptionService resumeReceivingOptionService)
         {
             _jobsService = jobsService;
             _jobCategoryService = jobCategoryService;
             _industryTypeService = industryTypeService;
-            _otherbenfitsService = otherbenfitsService;
+          
             _serviceTypeService = serviceTypeService;
             _resumeReceivingOptionService = resumeReceivingOptionService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var Result = await _jobsService.GetAllAsync(i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType, x => x.OtherBenfit);
+            var Result = await _jobsService.GetAllAsync(i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType);
 
             return View(Result);
         }
@@ -33,7 +33,7 @@ namespace Tactsoft.Controllers.Admin
         {
             ViewData["JobCategoryeId"] = _jobCategoryService.Dropdown();
             ViewData["IndustryTypeId"] = _industryTypeService.Dropdown();
-            ViewData["OthersBenefitsId"] = _otherbenfitsService.Dropdown();
+          
             ViewData["ServiceTypeId"] = _serviceTypeService.Dropdown();
             ViewData["ResumeReceivingOptionId"] = _resumeReceivingOptionService.Dropdown();
            
@@ -62,7 +62,7 @@ namespace Tactsoft.Controllers.Admin
                 }
                 ViewData["JobCategoryeId"] = _jobCategoryService.Dropdown();
                 ViewData["IndustryTypeId"] = _industryTypeService.Dropdown();
-                ViewData["OthersBenefitsId"] = _otherbenfitsService.Dropdown();
+               
                 ViewData["ServiceTypeId"] = _serviceTypeService.Dropdown();
                 ViewData["ResumeReceivingOptionId"] = _resumeReceivingOptionService.Dropdown();
                 TempData["errorAlert"] = "Operation failed.";
@@ -83,7 +83,7 @@ namespace Tactsoft.Controllers.Admin
             }
             ViewData["JobCategoryeId"] = _jobCategoryService.Dropdown();
             ViewData["IndustryTypeId"] = _industryTypeService.Dropdown();
-            ViewData["OthersBenefitsId"] = _otherbenfitsService.Dropdown();
+           
             ViewData["ServiceTypeId"] = _serviceTypeService.Dropdown();
             ViewData["ResumeReceivingOptionId"] = _resumeReceivingOptionService.Dropdown();
 
@@ -118,7 +118,7 @@ namespace Tactsoft.Controllers.Admin
             }
             ViewData["JobCategoryeId"] = _jobCategoryService.Dropdown();
             ViewData["IndustryTypeId"] = _industryTypeService.Dropdown();
-            ViewData["OthersBenefitsId"] = _otherbenfitsService.Dropdown();
+           
             ViewData["ServiceTypeId"] = _serviceTypeService.Dropdown();
             ViewData["ResumeReceivingOptionId"] = _resumeReceivingOptionService.Dropdown();
             TempData["errorAlert"] = "Operation failed.";
@@ -127,13 +127,13 @@ namespace Tactsoft.Controllers.Admin
 
         public async Task<IActionResult> Details(int id)
         {
-            var val = await _jobsService.FindAsync(m => m.Id == id, i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType, x => x.OtherBenfit);
+            var val = await _jobsService.FindAsync(m => m.Id == id, i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType );
             return View(val);
         }
 
         public async Task<IActionResult> Delete(int id)
         {
-            var val = await _jobsService.FindAsync(m => m.Id == id, i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType, x => x.OtherBenfit);
+            var val = await _jobsService.FindAsync(m => m.Id == id, i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType);
 
             if (val == null)
             {
@@ -141,7 +141,7 @@ namespace Tactsoft.Controllers.Admin
             }
             ViewData["JobCategoryeId"] = _jobCategoryService.Dropdown();
             ViewData["IndustryTypeId"] = _industryTypeService.Dropdown();
-            ViewData["OthersBenefitsId"] = _otherbenfitsService.Dropdown();
+            
             ViewData["ServiceTypeId"] = _serviceTypeService.Dropdown();
             ViewData["ResumeReceivingOptionId"] = _resumeReceivingOptionService.Dropdown();
 

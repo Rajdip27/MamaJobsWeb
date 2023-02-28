@@ -34,7 +34,7 @@ namespace Tactsoft.Service.DbDependencies
         public DbSet<JobCategory>  JobCategories { get; set; }
         public DbSet<ResumeReceivingOption>  ResumeReceivings { get; set; }
         public DbSet<ServiceType>  ServiceTypes { get; set; }
-        public DbSet<OtherBenfits>  OtherBenfits { get; set; }
+       
         public DbSet<PostingJobs>  PostingJobs { get; set; }
 
         #endregion

@@ -26,7 +26,7 @@ namespace Tactsoft.Service.Dependency
             services.AddScoped<IJobCategoryService, JobCategoryService>();
             services.AddScoped<IResumeReceivingOptionService, ResumeReceivingOptionService>();
             services.AddScoped<IServiceTypeService, ServiceTypeService>();
-            services.AddScoped<IOtherBenfitsService, OtherBenfitsService>();
+           
             services.AddScoped<IPostingJobsService, PostingJobsService>();
         }
     }

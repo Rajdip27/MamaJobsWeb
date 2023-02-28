@@ -96,13 +96,7 @@ namespace Tactsoft.Data.DbDependencies
                 CreatedBy = 1,
                 CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
             });
-            modelBuilder.Entity<OtherBenfits>().HasData(new OtherBenfits
-            {
-                Id = 1,
-                BenfitName = "Mobile bil",
-                CreatedBy = 1,
-                CreatedDateUtc = DateTime.ParseExact("2023-02-01", "yyyy-MM-dd", null)
-            });
+            
         }
 
     }

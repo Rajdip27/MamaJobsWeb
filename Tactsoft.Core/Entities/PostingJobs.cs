@@ -101,9 +101,23 @@ namespace Tactsoft.Core.Entities
         public string ApplicantList { get; set; }
         [Display(Name = "Do you want to alert applicant whlie his provided salary is excessive than given salary range at the time of applying ")]
         public string Applying { get; set; }
-        [Display(Name = "Compensation & Other Benfits")]
-        public long OthersBenefitsId { get; set; }
-        public OtherBenfits OtherBenfit { get; set; }
+        //[Display(Name = "Compensation & Other Benfits")]
+        public Boolean Nah { get; set; }
+
+        public Boolean TA  { get; set; }
+        public Boolean MoblieBil { get; set; }
+        public Boolean PensionPlicy { get; set; }
+        public Boolean TourAllowance { get; set; }
+        public Boolean CreditCard { get; set; }
+        public Boolean MedicalAllowance { get; set; }
+        public Boolean PerformanceBouns { get; set; }
+        public Boolean ProfitShare { get; set; }
+        public Boolean Providantfund { get; set; }
+        public Boolean Wekekly2Holidays { get; set; }
+        public Boolean InsuranceGratulty { get; set; }
+        public Boolean OverTimeAllowoanec { get; set; }
+
+
         [Display(Name = "Lanch Facilitics")]
         public string LanchFacilitics { get; set; }
         [Display(Name = "Salary Review")]
