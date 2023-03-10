@@ -11009,23 +11009,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Santnu\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Dipu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\Tactsoft.csproj",
+      "projectUniqueName": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft\\Tactsoft.csproj",
       "projectName": "Tactsoft",
-      "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\Tactsoft.csproj",
-      "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-      "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\obj\\",
+      "projectPath": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft\\Tactsoft.csproj",
+      "packagesPath": "C:\\Users\\Dipu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Santnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dipu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11039,14 +11035,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj"
+            "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Core\\Tactsoft.Core.csproj": {
+              "projectPath": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Core\\Tactsoft.Core.csproj"
             },
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj"
+            "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Data\\Tactsoft.Data.csproj": {
+              "projectPath": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Data\\Tactsoft.Data.csproj"
             },
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj"
+            "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Service\\Tactsoft.Service.csproj": {
+              "projectPath": "C:\\Users\\Dipu\\Desktop\\github\\Tactsoft.Service\\Tactsoft.Service.csproj"
             }
           }
         }
@@ -11137,7 +11133,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
