@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YIWK+JE0uJSSlPDHRmF1pSNkdTph49ufCeUac+PjFmBjD0PoHLC9u8EAL7dN8QfK+5Gyf67UYDH5WywDiYM+pQ==",
+  "dgSpecHash": "LaCWChRZeb9jYcpr6lNgANzMuDs86/L/VfeKMBJUeH08i2+68GaINeBPaffdibSpeKK918WbL6PlpWEfpjPTtQ==",
   "success": true,
-  "projectFilePath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj",
+  "projectFilePath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Santnu\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",
     "C:\\Users\\Santnu\\.nuget\\packages\\ardalis.specification.entityframeworkcore\\6.1.0\\ardalis.specification.entityframeworkcore.6.1.0.nupkg.sha512",

@@ -2390,11 +2390,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Santnu\\Source\\Repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj",
       "projectName": "Tactsoft.Core",
-      "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj",
+      "projectPath": "C:\\Users\\Santnu\\Source\\Repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj",
       "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-      "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\obj\\",
+      "outputPath": "C:\\Users\\Santnu\\Source\\Repos\\MamaJobsWeb\\Tactsoft.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

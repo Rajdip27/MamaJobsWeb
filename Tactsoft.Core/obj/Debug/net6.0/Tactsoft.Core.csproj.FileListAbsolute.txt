@@ -40,3 +40,17 @@ E:\RajdipProjectMamaJobsLast\Tactsoft\Tactsoft\Tactsoft.Core\obj\Debug\net6.0\re
 E:\RajdipProjectMamaJobsLast\Tactsoft\Tactsoft\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.pdb
 E:\RajdipProjectMamaJobsLast\Tactsoft\Tactsoft\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.genruntimeconfig.cache
 E:\RajdipProjectMamaJobsLast\Tactsoft\Tactsoft\Tactsoft.Core\obj\Debug\net6.0\ref\Tactsoft.Core.dll
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\bin\Debug\net6.0\Tactsoft.Core.deps.json
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\bin\Debug\net6.0\Tactsoft.Core.runtimeconfig.json
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\bin\Debug\net6.0\Tactsoft.Core.dll
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\bin\Debug\net6.0\Tactsoft.Core.pdb
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.csproj.AssemblyReference.cache
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.AssemblyInfoInputs.cache
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.AssemblyInfo.cs
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.csproj.CoreCompileInputs.cache
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.dll
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\refint\Tactsoft.Core.dll
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.pdb
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\Tactsoft.Core.genruntimeconfig.cache
+C:\Users\Santnu\Source\Repos\MamaJobsWeb\Tactsoft.Core\obj\Debug\net6.0\ref\Tactsoft.Core.dll

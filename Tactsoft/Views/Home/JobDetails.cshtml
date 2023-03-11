@@ -1,0 +1,103 @@
+﻿@model Tactsoft.Core.Entities.PostingJobs
+
+@{
+    ViewData["Title"] = "JobDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="job-details">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="job-details-box">
+                <div class="row">
+                    <h5 class="mb-4">Category: <span>@Model.JobCategory.JobCategoryeName</span></h5>
+                    <div class="col-md-9">
+                        <h4 class="job-title">@Model.JobTittle</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-8">
+                                <h6 class="company-name">@Model.CompanyName</h6>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#" class="all-jobs text-center">View all jobs of this company</a>
+                            </div>
+                        </div>
+                        <div class="vacancy mb-4">
+                            <h5>Vacancy</h5>
+                            <p>05</p>
+                        </div>
+                        <div class="job-responsibilities mb-4">
+                            <h5>Job Responsibilities</h5>
+                            <p>
+                                @Model.JobResponsibillites
+                            </p>
+                        </div>
+                        <div class="employee-status mb-4">
+                            <h5>Employee Status</h5>
+                            <p>@Model.FullTime</p>
+                        </div>
+                        <div class="workplace mb-4">
+                            <h5>Workplace</h5>
+                            <p>Office</p>
+                        </div>
+                        <div class="educational-requirments mb-4">
+                            <h5>Educational Requirments</h5>
+                            <ul>
+                                <li>
+                                    @Model.OtherEducationQualification
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="additional-requirements mb-4">
+                            <h5>Additional Requirements</h5>
+                            <ul>
+                                @Model.AdditionalRequirements
+                            </ul>
+                        </div>
+                        <div class="job-location mb-4">
+                            <h5>Job Location</h5>
+                            <p>@Model.JobLocation</p>
+                        </div>
+                        <div class="salary mb-4">
+                            <h5>Salary</h5>
+                            <p>@Model.SalaryReview</p>
+                        </div>
+                        <div class="benifits mb-5">
+                            <h5>Compensation & Other Benefits</h5>
+                            <ul>
+                                <li>Provident fund, Weekly 2 holidays, Gratuity</li>
+                                <li>Salary Review: Yearly</li>
+                                <li>Festival Bonus: 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="summery-box mb-5">
+                            <h5 class="box-title">Job Summery</h5>
+                            <div class="p-3">
+                                <h5>Published On: <span>@Model.CreatedDateUtc.ToString("dd/MM/yyyy")</span></h5>
+                                <h5>Vacancy: <span>5</span></h5>
+                                <h5>Employment Status: <span>Full Time</span></h5>
+                                <h5>Experience: <span>At least @Model.MinimumYearofExperience to @Model.MaximumYearofExperience  year(s)</span></h5>
+                                <h5>Age: <span>At least 27 years</span></h5>
+                                <h5>Job Location: <span>Dhaka</span></h5>
+                                <h5>Salary: <span>Negotiable</span></h5>
+                                <h5>Application Deadline: <span>@Model.ApplicationDeadline.ToString("dd/MM/yyyy")</span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apply-procedure">
+                        <h5>Read Before Apply</h5>
+                        <div class="line mb-5"></div>
+                        <button>Apply</button>
+                    </div>
+                    <div class="dead-line text-center mt-4">
+                        <p><b>Deadline:</b> @Model.ApplicationDeadline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

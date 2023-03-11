@@ -28,6 +28,7 @@ namespace Tactsoft.Service.Dependency
             services.AddScoped<IServiceTypeService, ServiceTypeService>();
            
             services.AddScoped<IPostingJobsService, PostingJobsService>();
+            services.AddScoped<IJobServices, JobServices>();
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj": {}
+    "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj": {}
   },
   "projects": {
-    "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj": {
+    "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj",
         "projectName": "Tactsoft.Core",
-        "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj",
+        "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj",
         "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-        "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\obj\\",
+        "outputPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -98,14 +98,14 @@
         }
       }
     },
-    "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj": {
+    "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj",
         "projectName": "Tactsoft.Data",
-        "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj",
+        "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj",
         "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-        "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\obj\\",
+        "outputPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -125,8 +125,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj": {
-                "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj"
+              "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj": {
+                "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj"
               }
             }
           }
@@ -182,14 +182,14 @@
         }
       }
     },
-    "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj": {
+    "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj",
         "projectName": "Tactsoft.Service",
-        "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj",
+        "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj",
         "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-        "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\obj\\",
+        "outputPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -209,11 +209,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj": {
-                "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj"
+              "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj": {
+                "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj"
               },
-              "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj": {
-                "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj"
+              "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj": {
+                "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj"
               }
             }
           }

@@ -11015,11 +11015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\Tactsoft.csproj",
+      "projectUniqueName": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft\\Tactsoft.csproj",
       "projectName": "Tactsoft",
-      "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\Tactsoft.csproj",
+      "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft\\Tactsoft.csproj",
       "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-      "outputPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft\\obj\\",
+      "outputPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11039,14 +11039,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Core\\Tactsoft.Core.csproj"
+            "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj": {
+              "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Core\\Tactsoft.Core.csproj"
             },
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Data\\Tactsoft.Data.csproj"
+            "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj": {
+              "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj"
             },
-            "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj": {
-              "projectPath": "E:\\RajdipProjectMamaJobsLast\\Tactsoft\\Tactsoft\\Tactsoft.Service\\Tactsoft.Service.csproj"
+            "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj": {
+              "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Service\\Tactsoft.Service.csproj"
             }
           }
         }

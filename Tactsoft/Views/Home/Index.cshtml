@@ -1,8 +1,566 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Tactsoft.Core.ViewModel.JobViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<partial name="FrontendPartial/Banner" />
+
+<!-- =========== Job Category Start =========== -->
+<div class="job-category">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="heading">
+                <div class="title">
+                    <h4>Choose Job Category</h4>
+                </div>
+                <div class="sub-title">
+                    <h6>Find quality talent or agencies</h6>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="all-Category mt-5">
+            <div class="row g-0">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-2">
+                        <a asp-action="AllJobByCategory" asp-controller="Home" asp-route-id="@item.Id">
+                            <div class="card">
+                                <div class="icon">
+                                    <img src="~/assets/img/job-category/1b.png" alt="">
+                                </div>
+                                <div class="card-body" style="padding: 1rem .5rem;">
+                                    <div class="categoryName">
+                                        <h4>@item.JobCategoryName</h4>
+                                    </div>
+                                    <h6>@item.TotalJob <span>Jobs</span></h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
 </div>
+<!-- =========== Job Category End =========== -->
+<!-- =========== Hot Jobs Start =========== -->
+<div class="hot-jobs">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="heading">
+                <div class="title">
+                    <h4><i class="bi bi-fire"></i> Hot Jobs</h4>
+                </div>
+                <div class="sub-title">
+                    <h6>Your Job for a Future</h6>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="row g-0 mt-5">
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Assistant Manager, Pest Control</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive, Human Resources (...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/square.png" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">Square Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                        <img src="assets/img/company-logo/generalPharma.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div>
+                        <h4 class="company-name">General Pharmaceuticals Ltd.</h4>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Executive - Commercial</a>
+                        <a href="#" class="job-position"><i class="bi bi-caret-right-fill"></i> Jr. Officer/ Officer, DTP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========== Hot Jobs End =========== -->
+<!-- =========== Role Collection Start =========== -->
+<div class="role-selection">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="first-section">
+                    <div class="img">
+                        <img src="assets/img/undraw_join_re_w1lh.svg" class="img-fluid" alt="">
+                    </div>
+                    <h2>Lorem ipsum dolor, sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum qui exercitationem omnis nam sed ab quis est sint sapiente?</p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="second-section">
+                    <div class="row" id="job-role-slider">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Front-End Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Flutter Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Mobile Apps Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>UI/ UX Designer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Mernstack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <a href="#">
+                                            <div class="job-box">
+                                                <h4>Full Stack Developer</h4>
+                                                <h6>2.3k Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========== Role Collection End =========== -->
+<!-- ============Searh Modal Start============ -->
+<!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Keywords..." aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============Searh Modal End============ -->
+
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
