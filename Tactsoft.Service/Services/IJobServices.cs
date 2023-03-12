@@ -11,5 +11,8 @@ namespace Tactsoft.Service.Services
     public interface IJobServices
     {
         IEnumerable<JobViewModel> GetJobByCategory();
+        double NumberOfVacancies();
+        double NumberOfJobs();
+        double NumberOfCompanies();
     }
 }

@@ -18,7 +18,9 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Job Tittle")]
         public string JobTittle { get; set; }
 
-      
+        [Display(Name = "Vacancy No")]
+        public double Vacancy { get; set; }
+
         public Boolean NA { get; set; }
 
 
@@ -26,19 +28,19 @@ namespace Tactsoft.Core.Entities
         public long JobCategoryeId { get; set; }
         public JobCategory JobCategory { get; set; }
 
-       
+
         public Boolean FullTime { get; set; }
-        
+
         public Boolean PartTime { get; set; }
-        
+
         public Boolean Contractual { get; set; }
-        
+
         public Boolean Internship { get; set; }
         public Boolean Freelance { get; set; }
 
         [Display(Name = "Application Deadline")]
 
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime ApplicationDeadline { get; set; }
 
 
@@ -47,7 +49,7 @@ namespace Tactsoft.Core.Entities
         public ResumeReceivingOption ResumeReceivingOption { get; set; }
 
 
-       
+
         public Boolean EmailAddress { get; set; }
         public Boolean HardCoppy { get; set; }
         public Boolean WalkinInterview { get; set; }
@@ -55,7 +57,7 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Email")]
         public string Infoemail { get; set; }
 
-       
+
         public Boolean MamajobEmail { get; set; }
 
         [Display(Name = "Special Instruction for job Seekers")]
@@ -64,11 +66,11 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Company Logo")]
         public string CompanyLogo { get; set; }
 
-        
+
         public Boolean Entry { get; set; }
-        
+
         public Boolean Mid { get; set; }
-        
+
         public Boolean Top { get; set; }
 
         [Display(Name = "Key Selling Points")]
@@ -89,6 +91,7 @@ namespace Tactsoft.Core.Entities
         public Boolean InsideBangladesh { get; set; }
 
         public Boolean OutsideBangladesh { get; set; }
+
         [Display(Name = "Job Location")]
         public string JobLocation { get; set; }
 
@@ -102,20 +105,20 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Do you want to alert applicant whlie his provided salary is excessive than given salary range at the time of applying ")]
         public string Applying { get; set; }
         //[Display(Name = "Compensation & Other Benfits")]
-        public Boolean Nah { get; set; }
+        public String Nah { get; set; }
 
-        public Boolean TA  { get; set; }
-        public Boolean MoblieBil { get; set; }
-        public Boolean PensionPlicy { get; set; }
-        public Boolean TourAllowance { get; set; }
-        public Boolean CreditCard { get; set; }
-        public Boolean MedicalAllowance { get; set; }
-        public Boolean PerformanceBouns { get; set; }
-        public Boolean ProfitShare { get; set; }
-        public Boolean Providantfund { get; set; }
-        public Boolean Wekekly2Holidays { get; set; }
-        public Boolean InsuranceGratulty { get; set; }
-        public Boolean OverTimeAllowoanec { get; set; }
+        public String TA { get; set; }
+        public String MoblieBil { get; set; }
+        public String PensionPlicy { get; set; }
+        public String TourAllowance { get; set; }
+        public String CreditCard { get; set; }
+        public String MedicalAllowance { get; set; }
+        public String PerformanceBouns { get; set; }
+        public String ProfitShare { get; set; }
+        public String Providantfund { get; set; }
+        public String Wekekly2Holidays { get; set; }
+        public String InsuranceGratulty { get; set; }
+        public String OverTimeAllowoanec { get; set; }
 
 
         [Display(Name = "Lanch Facilitics")]
@@ -132,18 +135,18 @@ namespace Tactsoft.Core.Entities
         [Display(Name = "Additional Salary info.")]
         public string AdditionalSalaryinfo { get; set; }
 
-       
 
 
-        [Display(Name = "Degree")]
-        public string Degree { get; set; }
+
+        [Display(Name = "Education Requirment")]
+        public string EducationRequirment { get; set; }
 
 
         [Display(Name = "Preferred Education Institution")]
         public string PreferredEducationInstitution { get; set; }
 
-        [Display(Name = "Other Education Qualification")]
-        public string OtherEducationQualification { get; set; }
+        [Display(Name = "Additional Requirment ")]
+        public string AdditionalRequirment { get; set; }
 
 
         [Display(Name = "Training/Trade Course")]
@@ -189,13 +192,18 @@ namespace Tactsoft.Core.Entities
         public string PreferredRetiredArmy { get; set; }
         [Display(Name = "Company Name")]
         public string CompanyName { get; set; }
-        [Display(Name = "Company Address")]
-        public string CompanyAddress { get; set; }
+        [Display(Name = "Job Address")]
+        public string JobAddress { get; set; }
         [Display(Name = "Industry Type")]
         public long IndustryTypeId { get; set; }
         public IndustryType IndustryType { get; set; }
         [Display(Name = "Company Business")]
         public string CompanyBusiness { get; set; }
+
+        [Display(Name = "publish on")]
+
+        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}", ApplyFormatInEditMode = false)]
+        public DateTime publishon { get; set; }
 
 
 

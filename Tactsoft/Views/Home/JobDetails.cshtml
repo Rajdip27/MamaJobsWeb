@@ -37,13 +37,14 @@
                         </div>
                         <div class="workplace mb-4">
                             <h5>Workplace</h5>
-                            <p>Office</p>
+                            <p>@Model.Workathome</p>
+                            <p>@Model.WorkatOffice</p>
                         </div>
                         <div class="educational-requirments mb-4">
                             <h5>Educational Requirments</h5>
                             <ul>
                                 <li>
-                                    @Model.OtherEducationQualification
+                                    @Model.AdditionalRequirements
                                 </li>
                             </ul>
                         </div>
@@ -58,15 +59,35 @@
                             <p>@Model.JobLocation</p>
                         </div>
                         <div class="salary mb-4">
-                            <h5>Salary</h5>
-                            <p>@Model.SalaryReview</p>
+                            <h5>MinSalary</h5>
+                            <p>@Model.MinimumSalary</p>
+                        </div>
+
+                        <div class="salary mb-4">
+                            <h5>MaxSalary</h5>
+                            <p>@Model.MaximumSalary</p>
                         </div>
                         <div class="benifits mb-5">
                             <h5>Compensation & Other Benefits</h5>
                             <ul>
-                                <li>Provident fund, Weekly 2 holidays, Gratuity</li>
-                                <li>Salary Review: Yearly</li>
-                                <li>Festival Bonus: 2</li>
+                                <li>@Model.Nah</li>
+                                <li>@Model.TA</li>
+                                <li>@Model.MedicalAllowance</li>
+                                <li>@Model.TourAllowance</li>
+                                <li>@Model.CreditCard</li>
+                                <li>@Model.MoblieBil</li>
+                                <li>@Model.PensionPlicy</li>
+                                <li>@Model.ProfitShare</li>
+
+
+                                <li>@Model.MoblieBil</li>
+                                <li>@Model.Providantfund</li>
+                                <li>@Model.Wekekly2Holidays</li>
+
+
+
+                                <li>@Model.InsuranceGratulty</li>
+                                <li>@Model.OverTimeAllowoanec</li>
                             </ul>
                         </div>
                     </div>
@@ -74,13 +95,13 @@
                         <div class="summery-box mb-5">
                             <h5 class="box-title">Job Summery</h5>
                             <div class="p-3">
-                                <h5>Published On: <span>@Model.CreatedDateUtc.ToString("dd/MM/yyyy")</span></h5>
+                                <h5>Published On: <span>@Model.publishon.ToString("dd/MM/yyyy")</span></h5>
                                 <h5>Vacancy: <span>5</span></h5>
                                 <h5>Employment Status: <span>Full Time</span></h5>
                                 <h5>Experience: <span>At least @Model.MinimumYearofExperience to @Model.MaximumYearofExperience  year(s)</span></h5>
-                                <h5>Age: <span>At least 27 years</span></h5>
-                                <h5>Job Location: <span>Dhaka</span></h5>
-                                <h5>Salary: <span>Negotiable</span></h5>
+                                <h5>Age: <span> @Model.Mainage to @Model.Maxage  year(s)</span></h5>
+                                <h5>Job Location: <span>@Model.JobLocation</span></h5>
+                                <h5>Salary:  <span> @Model.MinimumSalary to @Model.MaximumSalary  </span></h5>
                                 <h5>Application Deadline: <span>@Model.ApplicationDeadline.ToString("dd/MM/yyyy")</span></h5>
                             </div>
                         </div>

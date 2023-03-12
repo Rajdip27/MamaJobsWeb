@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Tactsoft.Service.Services;
 using Microsoft.EntityFrameworkCore;
+using Tactsoft.Core.ViewModel;
 
 namespace Tactsoft.Controllers
 {
@@ -25,8 +26,12 @@ namespace Tactsoft.Controllers
 
         public IActionResult Index()
         {
-            var data = _jobServices.GetJobByCategory();
-            return View(data);
+            FrontendViewModel vm = new FrontendViewModel();
+            vm.JobViewModels = _jobServices.GetJobByCategory();
+            vm.NumberOfJobs = _jobServices.NumberOfJobs();
+            vm.NumberOfCompanies=_jobServices.NumberOfCompanies();
+            vm.NumberOfVacancies=_jobServices.NumberOfVacancies();
+            return View(vm);
         }
 
         public IActionResult AllJobByCategory( long id)
@@ -39,6 +44,8 @@ namespace Tactsoft.Controllers
             var data = await _postingJobsService.FindAsync(x => x.Id == id, i => i.JobCategory, x => x.ServiceType, x => x.ResumeReceivingOption, x => x.IndustryType);
             return View(data);
         }
+
+
 
         public IActionResult Privacy()
         {

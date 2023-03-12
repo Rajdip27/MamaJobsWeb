@@ -25,5 +25,20 @@ namespace Tactsoft.Service.Services
 
             return jobViewModel;
         }
+
+        public double NumberOfCompanies()
+        {
+           return _appDbContext.Companies.ToList().Count();
+        }
+
+        public double NumberOfJobs()
+        {
+            return _appDbContext.PostingJobs.ToList().Count();
+        }
+
+        public double NumberOfVacancies()
+        {
+            return _appDbContext.PostingJobs.Sum(x => x.Vacancy);
+        }
     }
 }

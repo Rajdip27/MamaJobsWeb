@@ -1,10 +1,78 @@
-﻿@model IEnumerable<Tactsoft.Core.ViewModel.JobViewModel>
+﻿@model Tactsoft.Core.ViewModel.FrontendViewModel
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    .icons{
+        border: double 3px #999;
+        border-radius: 50%;
+
+    }
+    .icons i{
+        font-size:30px;
+        padding:10px;
+    }
+</style>
+
 <partial name="FrontendPartial/Banner" />
+
+<div class="row d-flex justify-content-center mt-5">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex justify-content-between">
+                        <div class="align-self-center icons">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="media-body text-right">
+                            <span>Number Of Vacancies</span>
+                            <h3>@Model.NumberOfVacancies</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex justify-content-between">
+                        <div class="align-self-center icons">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="media-body text-right">
+                            <span>Number Of Jobs</span>
+                            <h3>@Model.NumberOfJobs</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex justify-content-between">
+                        <div class="align-self-center icons">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="media-body text-right">
+                            <span>Number Of Companies</span>
+                            <h3>@Model.NumberOfCompanies</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- =========== Job Category Start =========== -->
 <div class="job-category">
@@ -22,23 +90,23 @@
         </div>
         <div class="all-Category mt-5">
             <div class="row g-0">
-                @foreach (var item in Model)
+                @foreach (var item in Model.JobViewModels)
                 {
-                    <div class="col-md-2">
-                        <a asp-action="AllJobByCategory" asp-controller="Home" asp-route-id="@item.Id">
-                            <div class="card">
-                                <div class="icon">
-                                    <img src="~/assets/img/job-category/1b.png" alt="">
-                                </div>
-                                <div class="card-body" style="padding: 1rem .5rem;">
-                                    <div class="categoryName">
-                                        <h4>@item.JobCategoryName</h4>
+                        <div class="col-md-2">
+                            <a asp-action="AllJobByCategory" asp-controller="Home" asp-route-id="@item.Id">
+                                <div class="card">
+                                    <div class="icon">
+                                        <img src="~/assets/img/job-category/1b.png" alt="">
                                     </div>
-                                    <h6>@item.TotalJob <span>Jobs</span></h6>
+                                    <div class="card-body" style="padding: 1rem .5rem;">
+                                        <div class="categoryName">
+                                            <h4>@item.JobCategoryName</h4>
+                                        </div>
+                                        <h6>@item.TotalJob <span>Jobs</span></h6>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                 }
             </div>
 

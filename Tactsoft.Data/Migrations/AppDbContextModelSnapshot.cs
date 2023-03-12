@@ -577,6 +577,9 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("AdditionalRequirements")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("AdditionalRequirment")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("AdditionalSalaryinfo")
                         .HasColumnType("nvarchar(max)");
 
@@ -593,9 +596,6 @@ namespace Tactsoft.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AreaOfExperience")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyAddress")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyBusiness")
@@ -616,10 +616,10 @@ namespace Tactsoft.Data.Migrations
                     b.Property<DateTimeOffset>("CreatedDateUtc")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<bool>("CreditCard")
-                        .HasColumnType("bit");
+                    b.Property<string>("CreditCard")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Degree")
+                    b.Property<string>("EducationRequirment")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("EmailAddress")
@@ -658,11 +658,14 @@ namespace Tactsoft.Data.Migrations
                     b.Property<bool>("InsideBangladesh")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("InsuranceGratulty")
-                        .HasColumnType("bit");
+                    b.Property<string>("InsuranceGratulty")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Internship")
                         .HasColumnType("bit");
+
+                    b.Property<string>("JobAddress")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("JobCategoryeId")
                         .HasColumnType("bigint");
@@ -703,8 +706,8 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("MaximumYearofExperience")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("MedicalAllowance")
-                        .HasColumnType("bit");
+                    b.Property<string>("MedicalAllowance")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Mid")
                         .HasColumnType("bit");
@@ -715,16 +718,13 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("MinimumYearofExperience")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("MoblieBil")
-                        .HasColumnType("bit");
+                    b.Property<string>("MoblieBil")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("NA")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("Nah")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("OtherEducationQualification")
+                    b.Property<string>("Nah")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Others")
@@ -733,17 +733,17 @@ namespace Tactsoft.Data.Migrations
                     b.Property<bool>("OutsideBangladesh")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OverTimeAllowoanec")
-                        .HasColumnType("bit");
+                    b.Property<string>("OverTimeAllowoanec")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PartTime")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("PensionPlicy")
-                        .HasColumnType("bit");
+                    b.Property<string>("PensionPlicy")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("PerformanceBouns")
-                        .HasColumnType("bit");
+                    b.Property<string>("PerformanceBouns")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PreferredEducationInstitution")
                         .HasColumnType("nvarchar(max)");
@@ -754,11 +754,11 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("ProfessionalCertification")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("ProfitShare")
-                        .HasColumnType("bit");
+                    b.Property<string>("ProfitShare")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Providantfund")
-                        .HasColumnType("bit");
+                    b.Property<string>("Providantfund")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("ResumeReceivingOptionId")
                         .HasColumnType("bigint");
@@ -775,14 +775,14 @@ namespace Tactsoft.Data.Migrations
                     b.Property<string>("SpecialInstructionforjobSeekers")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TA")
-                        .HasColumnType("bit");
+                    b.Property<string>("TA")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Top")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("TourAllowance")
-                        .HasColumnType("bit");
+                    b.Property<string>("TourAllowance")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TradeCourse")
                         .HasColumnType("nvarchar(max)");
@@ -793,11 +793,14 @@ namespace Tactsoft.Data.Migrations
                     b.Property<DateTimeOffset?>("UpdatedDateUtc")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<double>("Vacancy")
+                        .HasColumnType("float");
+
                     b.Property<bool>("WalkinInterview")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("Wekekly2Holidays")
-                        .HasColumnType("bit");
+                    b.Property<string>("Wekekly2Holidays")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("WorkatOffice")
                         .HasColumnType("bit");
@@ -807,6 +810,9 @@ namespace Tactsoft.Data.Migrations
 
                     b.Property<string>("personwithdisability")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("publishon")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

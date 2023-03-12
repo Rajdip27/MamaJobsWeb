@@ -105,7 +105,7 @@
         "projectName": "Tactsoft.Data",
         "projectPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\Tactsoft.Data.csproj",
         "packagesPath": "C:\\Users\\Santnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Santnu\\source\\repos\\MamaJobsWeb\\Tactsoft.Data\\obj\\",
+        "outputPath": "C:\\Users\\Santnu\\Source\\Repos\\MamaJobsWeb\\Tactsoft.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

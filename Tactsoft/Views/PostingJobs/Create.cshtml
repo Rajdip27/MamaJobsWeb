@@ -13,6 +13,7 @@
                     <h4 class="m-0">Job Posting Form</h4>
                 </div>
                 <div class="col-sm-6">
+                <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
                         <li class="breadcrumb-item active">@ViewData["Title"]</li>
@@ -53,17 +54,15 @@
                                         <span asp-validation-for="JobTittle" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-md-9 pt-2">
-                                        <label class="col-md-4 col-form-label">No.of Vacancies</label>
-                                        <div class="form-check form-check-inline">
-                                            <input type="checkbox" class="form-check-input" asp-for="NA" />
-                                            <label class="form-check-label" asp-for="NA">
-                                                @Html.DisplayNameFor(model => model.NA)
-                                            </label>
-                                        </div>
+
+                                 <div class="row mb-2">
+                                    <label asp-for="Vacancy" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="Vacancy" class="form-control" placeholder="NA" />
+                                        <span asp-validation-for="Vacancy" class="text-danger"></span>
                                     </div>
                                 </div>
+
                                 <div class="row mb-2">
                                     <label asp-for="JobCategoryeId" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9">
@@ -76,35 +75,35 @@
                                 <div class="row mb-2">
                                     <label class="col-md-3 col-form-label">Employment Status</label>
                                     <div class="col-md-9 pt-2">
-                                        
+
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="FullTime" />
                                             <label class="form-check-label" asp-for="FullTime">
-                                                @Html.DisplayNameFor(model => model.FullTime)
+                                                    @Html.DisplayNameFor(model => model.FullTime)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="PartTime" />
                                             <label class="form-check-label" asp-for="PartTime">
-                                                @Html.DisplayNameFor(model => model.PartTime)
+                                                    @Html.DisplayNameFor(model => model.PartTime)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Contractual" />
                                             <label class="form-check-label" asp-for="Contractual">
-                                                @Html.DisplayNameFor(model => model.Contractual)
+                                                    @Html.DisplayNameFor(model => model.Contractual)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Internship" />
                                             <label class="form-check-label" asp-for="Internship">
-                                                @Html.DisplayNameFor(model => model.Internship)
+                                                    @Html.DisplayNameFor(model => model.Internship)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Freelance" />
                                             <label class="form-check-label" asp-for="Freelance">
-                                                @Html.DisplayNameFor(model => model.Freelance)
+                                                    @Html.DisplayNameFor(model => model.Freelance)
                                             </label>
                                         </div>
                                     </div>
@@ -114,8 +113,15 @@
                                 <div class="row mb-2">
                                     <label asp-for="ApplicationDeadline" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9">
-                                        <input asp-for="ApplicationDeadline" class="form-control" />
+                                        <input type="date" asp-for="ApplicationDeadline" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
                                         <span asp-validation-for="ApplicationDeadline" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label asp-for="publishon" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input type="date" asp-for="publishon" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+                                            <span asp-validation-for="publishon" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -138,13 +144,13 @@
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="HardCoppy" />
                                             <label class="form-check-label" asp-for="HardCoppy">
-                                                @Html.DisplayNameFor(model => model.HardCoppy)
+                                                    @Html.DisplayNameFor(model => model.HardCoppy)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="WalkinInterview" />
                                             <label class="form-check-label" asp-for="WalkinInterview">
-                                                @Html.DisplayNameFor(model => model.WalkinInterview)
+                                                    @Html.DisplayNameFor(model => model.WalkinInterview)
                                             </label>
                                         </div>
 
@@ -167,7 +173,7 @@
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="MamajobEmail" />
                                             <label class="form-check-label" asp-for="MamajobEmail ">
-                                                @Html.DisplayNameFor(model => model.MamajobEmail)
+                                                    @Html.DisplayNameFor(model => model.MamajobEmail)
                                             </label>
                                         </div>
                                     </div>
@@ -204,13 +210,13 @@
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Mid" />
                                             <label class="form-check-label" asp-for="Mid">
-                                                @Html.DisplayNameFor(model => model.Mid)
+                                                    @Html.DisplayNameFor(model => model.Mid)
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Top" />
                                             <label class="form-check-label" asp-for="Top">
-                                                @Html.DisplayNameFor(model => model.Top)
+                                                    @Html.DisplayNameFor(model => model.Top)
                                             </label>
                                         </div>
 
@@ -230,28 +236,29 @@
                                 <div class="row mb-2">
                                     <label asp-for="JobContext" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
-                                        <input asp-for="JobContext" class="form-control" />
+                                        <textarea rows="4"asp-for="JobContext" class="form-control" /> </textarea>
                                         <span asp-validation-for="JobContext" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <label asp-for="JobResponsibillites" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9">
-                                        <input asp-for="JobResponsibillites" class="form-control" />
+
+                                       <textarea rows="4" asp-for="JobResponsibillites" class="form-control"></textarea> 
                                         <span asp-validation-for="JobResponsibillites" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
-                                    <label class="col-md-3 col-form-label">Job Level</label>
+                                    <label class="col-md-3 col-form-label">Job Place</label>
                                     <div class="col-md-9 pt-2">
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="WorkatOffice" />
-                                            <label class="form-check-label" asp-for="Entry">@Html.DisplayNameFor(model => model.WorkatOffice)</label>
+                                            <label class="form-check-label" asp-for="WorkatOffice">@Html.DisplayNameFor(model => model.WorkatOffice)</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="Workathome" />
                                             <label class="form-check-label" asp-for="Workathome">
-                                                @Html.DisplayNameFor(model => model.Workathome)
+                                                    @Html.DisplayNameFor(model => model.Workathome)
                                             </label>
                                         </div>
 
@@ -273,16 +280,16 @@
                                     </div>
                                 </div>
 
-                               
+
 
                                  <div class="row mb-2">
                                     <label asp-for="JobDetail" class="col-md-6 col-form-label"></label>
                                     <div class="col-md-6 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.JobDetail, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
+                                                @Html.RadioButtonFor(model => model.JobDetail, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.JobDetail, "No", htmlAttributes: new { @class = "form-check-input" }) No
+                                                @Html.RadioButtonFor(model => model.JobDetail, "No", htmlAttributes: new { @class = "form-check-input" }) No
                                         </label>
                                         <br />
                                         <span asp-validation-for="JobDetail" class="text-danger"></span>
@@ -293,10 +300,10 @@
                                     <label asp-for="ApplicantList" class="col-md-9 col-form-label"></label>
                                     <div class="col-md-3 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.ApplicantList, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
+                                                @Html.RadioButtonFor(model => model.ApplicantList, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.ApplicantList, "No", htmlAttributes: new { @class = "form-check-input" }) No
+                                                @Html.RadioButtonFor(model => model.ApplicantList, "No", htmlAttributes: new { @class = "form-check-input" }) No
                                         </label>
                                         <br />
                                         <span asp-validation-for="ApplicantList" class="text-danger"></span>
@@ -307,10 +314,10 @@
                                     <label asp-for="Applying" class="col-md-9 col-form-label"></label>
                                     <div class="col-md-3 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.Applying, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
+                                                @Html.RadioButtonFor(model => model.Applying, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.Applying, "No", htmlAttributes: new { @class = "form-check-input" }) No
+                                                @Html.RadioButtonFor(model => model.Applying, "No", htmlAttributes: new { @class = "form-check-input" }) No
                                         </label>
                                         <br />
                                         <span asp-validation-for="Applying" class="text-danger"></span>
@@ -324,7 +331,7 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <div class="row mb-2">
                                     <label class="col-md-3 col-form-label">Compensation & Other Benfits</label>
@@ -422,10 +429,10 @@
                                     <label asp-for="LanchFacilitics" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.LanchFacilitics, "Partially Subsidize", htmlAttributes: new { @class = "form-check-input" }) Partially Subsidize
+                                                @Html.RadioButtonFor(model => model.LanchFacilitics, "Partially Subsidize", htmlAttributes: new { @class = "form-check-input" }) Partially Subsidize
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.LanchFacilitics, "Full Subsidize", htmlAttributes: new { @class = "form-check-input" }) Full Subsidize
+                                                @Html.RadioButtonFor(model => model.LanchFacilitics, "Full Subsidize", htmlAttributes: new { @class = "form-check-input" }) Full Subsidize
                                         </label>
                                         <br />
                                         <span asp-validation-for="LanchFacilitics" class="text-danger"></span>
@@ -435,10 +442,10 @@
                                     <label asp-for="SalaryReview" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.SalaryReview, "Half Yaerly", htmlAttributes: new { @class = "form-check-input" }) Half Yaerly
+                                                @Html.RadioButtonFor(model => model.SalaryReview, "Half Yaerly", htmlAttributes: new { @class = "form-check-input" }) Half Yaerly
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.SalaryReview, "Yaerly", htmlAttributes: new { @class = "form-check-input" }) Yaerly
+                                                @Html.RadioButtonFor(model => model.SalaryReview, "Yaerly", htmlAttributes: new { @class = "form-check-input" }) Yaerly
                                         </label>
                                         <br />
                                         <span asp-validation-for="SalaryReview" class="text-danger"></span>
@@ -462,12 +469,12 @@
                             <div class="col-md-6">
 
 
-                               
+
                                 <div class="row mb-2">
-                                    <label asp-for="Degree" class="col-md-3 col-form-label"></label>
+                                    <label asp-for="EducationRequirment" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
-                                        <input asp-for="Degree" class="form-control" />
-                                        <span asp-validation-for="Degree" class="text-danger"></span>
+                                        <textarea asp-for="EducationRequirment" class="form-control" ></textarea>
+                                        <span asp-validation-for="EducationRequirment" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -478,10 +485,10 @@
                                     </div>
                                 </div>
                                 <div class="row mb-2">
-                                    <label asp-for="OtherEducationQualification" class="col-md-3 col-form-label"></label>
+                                    <label asp-for="AdditionalRequirements" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
-                                        <input asp-for="OtherEducationQualification" class="form-control" />
-                                        <span asp-validation-for="OtherEducationQualification" class="text-danger"></span>
+                                        <input asp-for="AdditionalRequirements" class="form-control" />
+                                        <span asp-validation-for="AdditionalRequirements" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -520,7 +527,7 @@
                                         <div class="form-check form-check-inline">
                                             <input type="checkbox" class="form-check-input" asp-for="FreshersApply" />
                                             <label class="form-check-label" asp-for="FreshersApply">
-                                                @Html.DisplayNameFor(model => model.FreshersApply)
+                                                    @Html.DisplayNameFor(model => model.FreshersApply)
                                             </label>
                                         </div>
                                     </div>
@@ -554,19 +561,23 @@
                                     <div class="col-md-9 pt-2">
                                         <input asp-for="AdditionalRequirements" class="form-control" />
                                         <span asp-validation-for="AdditionalRequirements" class="text-danger"></span>
+
+
+
+</select>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <label asp-for="Gender" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.Gender, "Male", htmlAttributes: new { @class = "form-check-input" }) Male
+                                                @Html.RadioButtonFor(model => model.Gender, "Male", htmlAttributes: new { @class = "form-check-input" }) Male
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.Gender, "Female", htmlAttributes: new { @class = "form-check-input" }) Female
+                                                @Html.RadioButtonFor(model => model.Gender, "Female", htmlAttributes: new { @class = "form-check-input" }) Female
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.Gender, "Other", htmlAttributes: new { @class = "form-check-input" }) Other
+                                                @Html.RadioButtonFor(model => model.Gender, "Both", htmlAttributes: new { @class = "form-check-input" }) Both
                                         </label>
                                         <br />
                                         <span asp-validation-for="Gender" class="text-danger"></span>
@@ -578,6 +589,16 @@
                                         <input asp-for="Mainage" class="form-control" />
                                         <span asp-validation-for="Mainage" class="text-danger"></span>
                                     </div>
+
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="JobLocation" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9 pt-2">
+                                        <input asp-for="JobLocation" class="form-control" />
+                                            <span asp-validation-for="JobLocation" class="text-danger"></span>
+                                    </div>
+
                                 </div>
                                 <div class="row mb-2">
                                     <label asp-for="Maxage" class="col-md-3 col-form-label"></label>
@@ -591,10 +612,10 @@
                                   <label asp-for="personwithdisability" class="col-md-9 col-form-label"></label>
                                     <div class="col-md-3 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.personwithdisability, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
+                                                @Html.RadioButtonFor(model => model.personwithdisability, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.personwithdisability, "No", htmlAttributes: new { @class = "form-check-input" }) No
+                                                @Html.RadioButtonFor(model => model.personwithdisability, "No", htmlAttributes: new { @class = "form-check-input" }) No
                                         </label>
                                         <br />
                                         <span asp-validation-for="personwithdisability" class="text-danger"></span>
@@ -605,10 +626,10 @@
                                     <label asp-for="PreferredRetiredArmy" class="col-md-9 col-form-label"></label>
                                     <div class="col-md-3 pt-2">
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.PreferredRetiredArmy, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
+                                                @Html.RadioButtonFor(model => model.PreferredRetiredArmy, "Yes", htmlAttributes: new { @class = "form-check-input" }) Yes
                                         </label>
                                         <label class="radio-inline mx-2">
-                                            @Html.RadioButtonFor(model => model.PreferredRetiredArmy, "No", htmlAttributes: new { @class = "form-check-input" }) No
+                                                @Html.RadioButtonFor(model => model.PreferredRetiredArmy, "No", htmlAttributes: new { @class = "form-check-input" }) No
                                         </label>
                                         <br />
                                         <span asp-validation-for="PreferredRetiredArmy" class="text-danger"></span>
@@ -626,10 +647,10 @@
                                 </div>
 
                                  <div class="row mb-2">
-                                    <label asp-for="CompanyAddress" class="col-md-3 col-form-label"></label>
+                                    <label asp-for="JobAddress" class="col-md-3 col-form-label"></label>
                                     <div class="col-md-9 pt-2">
-                                        <input asp-for="CompanyAddress" class="form-control" />
-                                        <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+                                        <input asp-for="JobAddress" class="form-control" />
+                                        <span asp-validation-for="JobAddress" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -652,33 +673,6 @@
                                 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
                     </div>
@@ -699,8 +693,8 @@
     </section>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
     }
