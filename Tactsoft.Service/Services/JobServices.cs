@@ -26,6 +26,12 @@ namespace Tactsoft.Service.Services
             return jobViewModel;
         }
 
+        public IEnumerable<HotJobsView> HotJobsViews()
+        {
+            var data = (from a in _appDbContext.PostingJobs select new { a.Id, a.CompanyLogo, a.CompanyName, a.JobTittle }).Select(c => new HotJobsView { Id = c.Id, CompanyName = c.CompanyName, ComapnyLogo = c.CompanyLogo, Jobtitle = c.JobTittle }).ToList();
+            return data;
+        }
+
         public double NumberOfCompanies()
         {
            return _appDbContext.Companies.ToList().Count();

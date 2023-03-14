@@ -14,5 +14,6 @@ namespace Tactsoft.Service.Services
         double NumberOfVacancies();
         double NumberOfJobs();
         double NumberOfCompanies();
+        IEnumerable<HotJobsView> HotJobsViews();
     }
 }

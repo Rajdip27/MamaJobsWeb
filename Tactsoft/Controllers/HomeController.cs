@@ -31,6 +31,7 @@ namespace Tactsoft.Controllers
             vm.NumberOfJobs = _jobServices.NumberOfJobs();
             vm.NumberOfCompanies=_jobServices.NumberOfCompanies();
             vm.NumberOfVacancies=_jobServices.NumberOfVacancies();
+            vm.HotJobsViews = _jobServices.HotJobsViews();
             return View(vm);
         }
 
